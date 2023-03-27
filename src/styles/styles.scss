@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background-color: lightgray;
+}
+
+//Components
+@import "./components/header.css";
+@import "./components/navigation.css";
