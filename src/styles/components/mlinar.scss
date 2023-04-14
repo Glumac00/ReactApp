@@ -1,0 +1,33 @@
+.Mlinar {
+  &__header {
+    max-width: 40rem;
+    &__text {
+      font-weight: bold;
+      font-size: 50px;
+    }
+  }
+  &__wrapper {
+    margin-left: 10.3rem;
+  }
+  &__tags {
+    margin-top: 1rem;
+  }
+  &__tag {
+    background-color: rgb(24, 24, 24);
+    padding: 2px;
+    border-radius: 20px;
+    font-size: 10px;
+    white-space: normal;
+    text-align: center;
+    padding: 6px 15px;
+    color: #fff;
+    height: 48px;
+    margin-right: 1rem;
+  }
+  &__grid {
+    display: flex;
+    &__item {
+      margin-right: 1rem;
+    }
+  }
+}

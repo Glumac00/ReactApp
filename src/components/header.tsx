@@ -1,21 +1,27 @@
-import logo from "./../assets/logo.png";
+import logo from "./../assets/Logo.png";
 
 const Header = () => {
   return (
-    <header className="Header">
-      <img className="Header__logo" src={logo} alt="Logo" />
-      <div className="Header__navigation">
-        <div>
-          <ul className="Header__list">
-            <a href="./../../AboutMe.html" className="Header__list__item">
-              About me
-            </a>
-            <a href="./../../Projects.html" className="Header__list__item">
-              Projects
-            </a>
-          </ul>
-        </div>
-        <div className="Header__navigation__initials">A.G.</div>
+    <header className="header">
+      <div>
+        <img className="header__logo" src={logo} alt="Logo" />
+      </div>
+      <div className="header__actions">
+        <nav className="header__nav">
+          <a className="header__nav__item" href="/Home">
+            Home
+          </a>
+          <a className="header__nav__item" href="/Exe">
+            Exercises
+          </a>
+          <a className="header__nav__item" href="/Ispit">
+            Ispit
+          </a>
+          <a className="header__nav__item" href="/Mlinar">
+            Mlinar
+          </a>
+        </nav>
+        <div className="header__nav__item">AG</div>
       </div>
     </header>
   );

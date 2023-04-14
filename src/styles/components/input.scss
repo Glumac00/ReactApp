@@ -1,0 +1,16 @@
+.input {
+  width: 100%;
+  padding: 0.5rem, 1.5;
+  border: 1px solid coral;
+  margin-bottom: 1rem;
+
+  @media (min-width: $media-lg) {
+    width: 15em;
+  }
+  &--rounded {
+    border-radius: 0.5rem;
+  }
+  &__validation {
+    margin-top: -1rem;
+  }
+}

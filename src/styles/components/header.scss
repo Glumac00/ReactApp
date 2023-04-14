@@ -1,40 +1,45 @@
-.Header {
-  width: 1920px;
+.header {
   display: flex;
   justify-content: space-between;
-  background-color: lightgray;
-  border: 5px solid darkolivegreen;
   align-items: center;
+  padding: 2rem;
+  background: linear-gradient(rgb(59, 59, 59), rgb(192, 0, 0));
 
   &__logo {
-    height: 150px;
-    width: 225px;
-    border: 2px solid darkolivegreen;
-    border-radius: 30px;
-    margin-left: 2rem;
+    width: 5rem;
   }
-  &__list {
+
+  &__nav {
+    margin-right: 2rem;
     display: flex;
     &__item {
-      margin-right: 2rem;
-      font-size: smaller;
-      border: 1px solid black;
-      padding: 1rem;
-      background-color: black;
-      border-radius: 30px;
-      color: white;
-    }
-    &__item:hover {
-      background-color: yellowgreen;
-      border: 1px solid yellowgreen;
-      color: black;
+      text-decoration: none;
+      color: $black;
+      font-size: 2rem;
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: $black;
+        transition: all 250ms ease;
+      }
     }
   }
-  &__navigation {
+  &__actions {
     display: flex;
-    &__initials {
-      display: flex;
-      padding: 5rem;
-    }
+    align-items: center;
   }
 }

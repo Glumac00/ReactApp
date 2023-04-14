@@ -1,0 +1,40 @@
+.box {
+  width: 5rem;
+  height: 5rem;
+  background-color: $secondary-color;
+  border-radius: 0.5rem;
+  transition: all 250ms ease;
+  border: 1px solid black;
+  display: flex;
+  cursor: pointer;
+  margin-right: 1rem;
+
+  &--translate {
+    &:hover {
+      transform: translate3d(50px, 0, 0);
+    }
+  }
+  &--rotate {
+    &:hover {
+      transform: rotate3d(1, 1, 1, 45deg);
+    }
+  }
+  &--scale {
+    &:hover {
+      transform: scale3d(-1.4, 0.4, 0.7);
+    }
+  }
+  &--skew {
+    &:hover {
+      transform: skew(15deg, 15deg);
+    }
+  }
+  &__wrapper {
+    display: flex;
+
+    flex-direction: column;
+    @media (min-width: $media-lg) {
+      flex-direction: row;
+    }
+  }
+}
