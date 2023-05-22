@@ -15,6 +15,8 @@ const Card = ({ Value }: CardProps) => {
       <div className="card__footer">
         <button className="card__button--1">OK</button>
         <button className="card__button--2">Cancel</button>
+
+        <div>aaaaaaaaaa</div>
       </div>
     </div>
   );
