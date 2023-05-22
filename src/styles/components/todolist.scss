@@ -1,0 +1,73 @@
+.ToDoList {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    width: auto;
+    margin-right: 33%;
+    margin-left: 33%;
+    margin-top: 5rem;
+    border: 2px solid black;
+  }
+  &__header {
+    text-align: center;
+    width: 100%;
+    background-color: rgb(192, 0, 0);
+    color: black;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  &__input {
+    &__textbox {
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid black;
+      border-radius: 4px;
+      margin-right: 1rem;
+    }
+    &__checkbox {
+      margin-right: 8px;
+      height: 1.5em;
+      width: 1.5em;
+      cursor: pointer;
+      position: relative;
+      transition: 0.1s;
+      border-radius: 4em;
+      background-color: red;
+      font-size: 16px;
+      accent-color: rgb(192, 0, 0);
+    }
+  }
+  &__button {
+    padding: 8px 16px;
+    background-color: rgb(192, 0, 0);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: darken(red, 10%);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+  }
+  &__text {
+    color: black;
+    font-size: 16px;
+    transition: text-decoration 0.3s ease-in-out;
+    &.done {
+      text-decoration: line-through;
+    }
+  }
+}

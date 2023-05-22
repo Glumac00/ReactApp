@@ -1,0 +1,25 @@
+table,
+th,
+td {
+  border: 2px solid black;
+  margin: 1rem;
+  width: auto;
+  text-align: center;
+  padding: 1rem;
+}
+th {
+  text-transform: uppercase;
+  color: beige;
+  background-color: darkgray;
+}
+td {
+  color: rgb(24, 22, 22);
+  background-color: beige;
+}
+table {
+  background-color: whitesmoke;
+  border: 2px solid beige;
+}
+ul {
+  list-style-type: none;
+}
