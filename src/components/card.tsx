@@ -16,7 +16,7 @@ const Card = ({ Value }: CardProps) => {
         <button className="card__button--1">OK</button>
         <button className="card__button--2">Cancel</button>
 
-        <div>aaaaaaaaaa</div>
+        <div>woooooooooooooooooooo</div>
       </div>
     </div>
   );
