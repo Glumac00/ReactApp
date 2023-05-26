@@ -1,35 +1,68 @@
 .Vjezba2405 {
+  &__overlay {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    display: hidden;
+  }
   &__header {
-    border: 1px solid black;
     margin: 1rem;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__body {
     border: 1px solid black;
     margin: 1rem;
+
     border-radius: 20px;
-    padding: 1rem;
+    padding: 2rem;
+    color: whitesmoke;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 300;
+    background: rgb(56, 56, 56);
+  }
+  &__modalcontent {
+    display: flex;
+    flex-direction: column;
     color: white;
+    &__img {
+      border-radius: 10px;
+    }
   }
 }
 
 .modal {
   display: none;
   &.isactive {
-    margin: 25%;
-    width: fit-content;
-    height: fit-content;
-    display: block;
-    border: 1px solid red;
-    padding: 3rem;
-    padding-right: 10rem;
-    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    animation: fadeIn 0.5s;
   }
 }
 .close {
-  position: absolute;
-  right: 0;
-  margin-right: 1rem;
+  position: relative;
+  padding: 0.2rem;
+  background-color: gray;
+  border-radius: 100%;
+  border: 1px solid black;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
