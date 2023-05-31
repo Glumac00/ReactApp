@@ -28,7 +28,6 @@ const Vjezba2405 = () => {
         <h2>
           List of all promenant 1st squad active players of the 22/23 season
         </h2>
-
         <div>
           {ListOfPlayers.map((link) => {
             return (

@@ -18,6 +18,7 @@ import Vjezba1505 from "./pages/vjezba1505";
 import ToDoList from "./pages/todolist";
 import ParcijalniIspit from "./pages/parcijalnitest";
 import Vjezba2405 from "./pages/vjezba2405";
+import Bootstrap from "./pages/bootstrap";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -88,6 +89,10 @@ const App = () => {
     {
       path: "/Vjezba2405",
       element: <Vjezba2405 />,
+    },
+    {
+      path: "/Bootstrap",
+      element: <Bootstrap />,
     },
   ]);
 
