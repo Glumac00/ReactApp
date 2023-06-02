@@ -107,7 +107,7 @@ const Europe = () => {
                   })}
                 </td>
                 <td>{country.area}</td>
-                <td>{country.borders}</td>
+                <td>{country.borders + ", "}</td>
               </tr>
             );
           })}

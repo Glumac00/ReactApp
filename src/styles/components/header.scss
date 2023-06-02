@@ -1,18 +1,19 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 2rem;
-  background: rgba(216, 0, 0, 0.747);
-  width: 150%;
+  background: rgba(167, 0, 0, 0.747);
+  width: 100%;
   border-bottom: 2px solid black;
 
   &__logo {
     width: 5rem;
+    float: left;
   }
 
   &__nav {
     display: flex;
+    flex-direction: column;
     width: 100%;
     &__item {
       display: flex;
@@ -20,7 +21,8 @@
       text-decoration: none;
       color: $black;
       font-size: 2rem;
-      margin-right: 1rem;
+      margin-right: 2rem;
+      margin-left: 1rem;
       word-wrap: break-word;
       flex-grow: 1;
     }
@@ -28,6 +30,5 @@
   &__actions {
     display: flex;
     align-items: center;
-    width: 100%;
   }
 }

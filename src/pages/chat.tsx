@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
 interface ChatBoxProps {}
 const Chat: React.FC<ChatBoxProps> = () => {
   const [inputText, setInputText] = useState("");
@@ -32,9 +33,13 @@ const Chat: React.FC<ChatBoxProps> = () => {
           />
         </div>
         <div>
-          <button className="chat__button" onClick={handleSendClick}>
-            Send
-          </button>
+          <Button
+            variant="dark"
+            className="chat__button"
+            onClick={handleSendClick}
+          >
+            Dark
+          </Button>
         </div>
       </div>
     </div>

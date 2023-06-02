@@ -5,6 +5,7 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import Table from "react-bootstrap/Table";
 import Grass from "./../assets/grass.png";
+import Alert from "react-bootstrap/Alert";
 import React, { useState, useEffect } from "react";
 
 import {
@@ -199,8 +200,15 @@ const Bootstrap = () => {
   const [position, setPosition] = useState(0);
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.code === "KeyB") {
-        setPosition((prevPosition) => prevPosition + 5);
+      if (event.code === "KeyA") {
+        setPosition((prevPosition) => {
+          if (prevPosition >= 500) {
+            alert("We have a winner!");
+            return prevPosition;
+          } else {
+            return prevPosition + 5;
+          }
+        });
       }
     };
     window.addEventListener("keydown", handleKeyDown);
@@ -212,8 +220,15 @@ const Bootstrap = () => {
   const [position2, setPosition2] = useState(0);
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.code === "KeyA") {
-        setPosition2((prevPosition) => prevPosition + 5);
+      if (event.code === "KeyB") {
+        setPosition2((prevPosition) => {
+          if (prevPosition >= 500) {
+            alert("We have a winner!");
+            return prevPosition;
+          } else {
+            return prevPosition + 5;
+          }
+        });
       }
     };
     window.addEventListener("keydown", handleKeyDown);
@@ -221,6 +236,7 @@ const Bootstrap = () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
+
   return (
     <div className="bootstrap">
       <div className="bootstrap__header">
@@ -233,7 +249,7 @@ const Bootstrap = () => {
           id="uncontrolled-tab-example"
           className="mb-3"
         >
-          <Tab eventKey="home" title="Dashboard">
+          <Tab eventKey="profile" title="Dashboard">
             <Card style={{ width: "18rem" }} className="bootstrap__body__card">
               <Card.Body>
                 <Card.Title>45%</Card.Title>
@@ -292,7 +308,7 @@ const Bootstrap = () => {
               </tbody>
             </Table>
           </Tab>
-          <Tab eventKey="profile" title="Game">
+          <Tab eventKey="game" title="Game">
             <div>
               <div>Player 1</div>
               <div>
@@ -305,13 +321,8 @@ const Bootstrap = () => {
                   style={{ marginLeft: position }}
                 />
               </div>
+
               <img src={Grass} alt="grass" className="grass" />
-              <img
-                src="https://www.svgrepo.com/show/382133/racing-flag.svg"
-                alt="flag"
-                height={100}
-                width={100}
-              />
             </div>
             <div>
               <div>Player 2</div>
@@ -325,13 +336,8 @@ const Bootstrap = () => {
                   style={{ marginLeft: position2 }}
                 />
               </div>
-              <img src={Grass} alt="grass" />
-              <img
-                src="https://www.svgrepo.com/show/382133/racing-flag.svg"
-                alt="flag"
-                height={100}
-                width={100}
-              />
+
+              <img src={Grass} alt="grass" className="grass" />
             </div>
           </Tab>
         </Tabs>

@@ -28,5 +28,13 @@
   }
 }
 .Kyle {
-  margin-top: 1rem;
+  position: relative;
+  z-index: 2;
+  margin-top: 3rem;
+}
+
+.grass {
+  z-index: 1;
+  position: relative;
+  margin-bottom: 2rem;
 }

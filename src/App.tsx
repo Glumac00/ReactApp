@@ -23,7 +23,7 @@ import Bootstrap from "./pages/bootstrap";
 const App = () => {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/Home",
       element: <Home />,
     },
     {

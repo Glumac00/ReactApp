@@ -1,21 +1,37 @@
-import Button from "../components/button";
 import Card from "../components/card";
 import Card2 from "../components/card2";
 import Checkbox from "../components/checkbox";
 import FlexExe from "../components/FlexExe";
 import Input from "../components/input";
-import Modal from "../components/modal";
-import Pagination from "../components/pagination";
+import Modal from "react-bootstrap/Modal";
+
 import Tags from "../components/tags";
 import TransformExe from "../components/TransformExe";
 import Formfield from "../components/formfield";
+import Pagination from "react-bootstrap/Pagination";
 
+import Button from "react-bootstrap/Button";
+import { useState } from "react";
 const Exe = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  let active = 2;
+  let items = [];
+  for (let number = 1; number <= 5; number++) {
+    items.push(
+      <Pagination.Item key={number} active={number === active}>
+        {number}
+      </Pagination.Item>
+    );
+  }
   return (
     <>
       <div className="container">
         <h1>Button</h1>
-        <Button />
+        <Button variant="dark">Click me!</Button>
       </div>
       <div className="container">
         <h1>input</h1>
@@ -38,8 +54,26 @@ const Exe = () => {
           <Tags />
         </div>
         <div className="container">
-          <h1>Modal (if i had one)</h1>
-          <Modal />
+          <Button variant="dark" onClick={handleShow}>
+            Launch demo modal
+          </Button>
+
+          <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              Woohoo, you are reading this text in a modal!
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+              <Button variant="primary" onClick={handleClose}>
+                Save Changes
+              </Button>
+            </Modal.Footer>
+          </Modal>
         </div>
         <br />
         <div className="container">
@@ -93,9 +127,16 @@ const Exe = () => {
               DaysRemaining="14 days"
             />
           </div>
-          <footer className="footer">
-            <Pagination />
-          </footer>
+
+          <div>
+            <Pagination>{items}</Pagination>
+            <br />
+
+            <Pagination size="lg">{items}</Pagination>
+            <br />
+
+            <Pagination size="sm">{items}</Pagination>
+          </div>
         </div>
       </div>
     </>
